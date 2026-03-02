@@ -12,7 +12,7 @@ def home():
 def ping():
     ip = request.args.get("ip")
     # ❌ Vulnerable: command injection
-    result = subprocess.getoutput("ping -c 1 " + ip)
+    result = "Ping disabled for security reasons"
     return result
 
 @app.route("/read")
